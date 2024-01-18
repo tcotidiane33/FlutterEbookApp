@@ -9,7 +9,7 @@ class LicensesScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return LicensePage(
       applicationIcon: Image.asset(
-        'assets/images/app-icon.png',
+        'assets/images/deal.png',
         height: 150,
         fit: BoxFit.cover,
       ),

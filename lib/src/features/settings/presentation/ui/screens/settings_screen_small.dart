@@ -20,27 +20,27 @@ class _SettingsScreenSmallState extends State<SettingsScreenSmall> {
     items = [
       {
         'icon': Feather.heart,
-        'title': 'Favorites',
+        'title': 'Favoris',
         'function': () => _pushPage(const FavoritesRoute()),
       },
       {
         'icon': Feather.download,
-        'title': 'Downloads',
+        'title': 'Téléchargements',
         'function': () => _pushPage(const DownloadsRoute()),
       },
       {
         'icon': Feather.moon,
-        'title': 'Dark Mode',
+        'title': 'Mode Nuit',
         'function': null,
       },
       {
         'icon': Feather.info,
-        'title': 'About',
+        'title': 'A propos',
         'function': () => showAbout(),
       },
       {
         'icon': Feather.file_text,
-        'title': 'Open Source Licenses',
+        'title': 'Licenses Open Source ',
         'function': () => _pushPage(const LicensesRoute()),
       },
     ];
@@ -52,7 +52,7 @@ class _SettingsScreenSmallState extends State<SettingsScreenSmall> {
       appBar: context.isSmallScreen
           ? AppBar(
               centerTitle: true,
-              title: const Text('Settings'),
+              title: const Text('Paramètres'),
             )
           : null,
       body: Column(
@@ -64,7 +64,7 @@ class _SettingsScreenSmallState extends State<SettingsScreenSmall> {
             physics: const NeverScrollableScrollPhysics(),
             itemCount: items.length,
             itemBuilder: (BuildContext context, int index) {
-              if (items[index]['title'] == 'Dark Mode') {
+              if (items[index]['title'] == 'Mode Nuit') {
                 if (context.isPlatformDarkThemed) {
                   return const SizedBox.shrink();
                 }
@@ -81,7 +81,7 @@ class _SettingsScreenSmallState extends State<SettingsScreenSmall> {
               );
             },
             separatorBuilder: (BuildContext context, int index) {
-              if (items[index]['title'] == 'Dark Mode' &&
+              if (items[index]['title'] == 'Mode Nuit' &&
                   context.isPlatformDarkThemed) {
                 return const SizedBox.shrink();
               }
@@ -106,9 +106,9 @@ class _SettingsScreenSmallState extends State<SettingsScreenSmall> {
       context: context,
       builder: (_) {
         return AlertDialog(
-          title: const Text('About'),
+          title: const Text('A propos'),
           content: const Text(
-            'OpenLeaf is a Simple ebook app by JideGuru using Flutter',
+            'Xchange is a Simple Food app by Tcotidiane using Flutter',
           ),
           actions: <Widget>[
             TextButton(
@@ -118,7 +118,7 @@ class _SettingsScreenSmallState extends State<SettingsScreenSmall> {
                 ),
               ),
               onPressed: () => Navigator.pop(context),
-              child: const Text('Close'),
+              child: const Text('Fermer'),
             ),
           ],
         );

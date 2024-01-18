@@ -14,6 +14,7 @@ class TabsScreenSmall extends ConsumerWidget {
         HomeRoute(),
         ExploreRoute(),
         SettingsRoute(),
+        //ProfilRoute(),
       ],
       transitionBuilder: (context, child, animation) => FadeTransition(
         opacity: animation,
@@ -32,16 +33,22 @@ class TabsScreenSmall extends ConsumerWidget {
             items: const <BottomNavigationBarItem>[
               BottomNavigationBarItem(
                 icon: Icon(Feather.home),
-                label: 'Home',
+                label: 'Accueil',
               ),
               BottomNavigationBarItem(
                 icon: Icon(Feather.compass),
-                label: 'Explore',
+                label: 'Explorer',
               ),
               BottomNavigationBarItem(
                 icon: Icon(Feather.settings),
-                label: 'Settings',
+                label: 'Paramètre',
               ),
+              BottomNavigationBarItem(
+                icon: Icon(Feather.user),
+                label: 'Profil',
+              ),
+
+              
             ],
             onTap: tabsRouter.setActiveIndex,
             currentIndex: tabsRouter.activeIndex,

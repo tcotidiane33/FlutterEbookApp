@@ -13,19 +13,19 @@ class DebugPage extends ConsumerWidget {
       body: ListView(
         children: <Widget>[
           ListTile(
-            title: const Text('Clear Downloads'),
+            title: const Text('Effacer les téléchargements'),
             onTap: () {
               ref.read(downloadsNotifierProvider.notifier).clearBooks();
             },
           ),
           ListTile(
-            title: const Text('Clear Favorites'),
+            title: const Text('Effacer les favoris'),
             onTap: () {
               ref.read(favoritesNotifierProvider.notifier).clearBooks();
             },
           ),
           ListTile(
-            title: Text('Change Theme to ${isDarkMode ? 'Light' : 'Dark'}'),
+            title: Text('Changer le thème en ${isDarkMode ? 'Jour' : 'Nuit'}'),
             onTap: () {
               ref
                   .read(currentAppThemeNotifierProvider.notifier)

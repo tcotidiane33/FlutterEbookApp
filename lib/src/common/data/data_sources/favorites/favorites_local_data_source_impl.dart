@@ -17,7 +17,7 @@ class FavoritesLocalDataSourceImpl implements FavoritesLocalDataSource {
   Future<void> addBook(Entry book, String id) async {
     await _store.record(id).put(_database, book.toJson());
     Logman.instance.recordSimpleLog(
-      'Added book to favorites: ${book.title}',
+      'Ajouter un produit aux favoris: ${book.title}',
     );
   }
 
@@ -25,7 +25,7 @@ class FavoritesLocalDataSourceImpl implements FavoritesLocalDataSource {
   Future<void> deleteBook(String id) async {
     await _store.record(id).delete(_database);
     Logman.instance.recordSimpleLog(
-      'Deleted book from favorites: $id',
+      'Rétirer un produit aux favoris: $id',
     );
   }
 
@@ -42,7 +42,7 @@ class FavoritesLocalDataSourceImpl implements FavoritesLocalDataSource {
   Future<void> clearBooks() async {
     await _store.delete(_database);
     Logman.instance.recordSimpleLog(
-      'Cleared all books from favorites',
+      'Supprimer tous les produits dans favoris',
     );
   }
 }

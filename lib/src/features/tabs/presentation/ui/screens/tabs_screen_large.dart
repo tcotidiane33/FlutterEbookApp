@@ -15,6 +15,7 @@ class TabsScreenLarge extends ConsumerWidget {
         HomeRoute(),
         ExploreRoute(),
         SettingsRoute(),
+        ProfilRoute(),
       ],
       transitionBuilder: (context, child, animation) => FadeTransition(
         opacity: animation,
@@ -27,7 +28,7 @@ class TabsScreenLarge extends ConsumerWidget {
             children: [
               NavigationRail(
                 leading: Image.asset(
-                  'assets/images/app-icon.png',
+                  'assets/images/deal.png',
                   height: 80,
                 ),
                 selectedIndex: tabsRouter.activeIndex,
@@ -42,17 +43,23 @@ class TabsScreenLarge extends ConsumerWidget {
                 destinations: const <NavigationRailDestination>[
                   NavigationRailDestination(
                     icon: Icon(Feather.home),
-                    label: Text('Home'),
+                    label: Text('Accueil'),
                   ),
                   NavigationRailDestination(
                     icon: Icon(Feather.compass),
-                    label: Text('Explore'),
+                    label: Text('Explorer'),
                   ),
                   NavigationRailDestination(
                     icon: Icon(Feather.settings),
                     // selectedIcon: Icon(Icons.favorite),
-                    label: Text('Settings'),
+                    label: Text('Paramètre'),
                   ),
+                  NavigationRailDestination(
+                    icon: Icon(Feather.user),
+                    label: Text('Profil'),
+                  ),
+
+                  
                 ],
                 selectedIconTheme: IconThemeData(
                   color: context.theme.colorScheme.secondary,

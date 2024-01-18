@@ -59,7 +59,7 @@ class _HomeScreenSmallState extends ConsumerState<HomeScreenSmall> {
                   const SizedBox(height: 10.0),
                   _GenreSection(popular: popular),
                   const SizedBox(height: 20.0),
-                  const _SectionTitle(title: 'Recently Added'),
+                  const _SectionTitle(title: 'Ajouter Réçents'),
                   const SizedBox(height: 20.0),
                   _NewSection(recent: recent),
                 ],

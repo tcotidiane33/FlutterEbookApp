@@ -123,6 +123,19 @@ class SettingsRoute extends PageRouteInfo<void> {
 
   static const PageInfo<void> page = PageInfo<void>(name);
 }
+/// generated route for
+/// [ProfilScreen]
+class ProfilRoute extends PageRouteInfo<void> {
+  const ProfilRoute({List<PageRouteInfo>? children})
+      : super(
+    ProfilRoute.name,
+    initialChildren: children,
+  );
+
+  static const String name = 'ProfilRoute';
+
+  static const PageInfo<void> page = PageInfo<void>(name);
+}
 
 /// generated route for
 /// [LicensesScreen]
