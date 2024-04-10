@@ -27,7 +27,7 @@
     "approx-string-match": "^1.1.0",
     "core-js": "^3.21.1",
     "hash.js": "^1.1.7",
-    "regenerator-runtime": "^0.13.9",
+    "regenerator-runtime": "^0.14.0",
     "string.prototype.matchall": "^4.0.5",
     "tocca": "^2.0.9"
   }
